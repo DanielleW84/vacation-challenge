@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+   
+    <title>Welcome to South Africa</title>
+  </head>
+  <style>
+body {
+  font-family: "Poppins", sans-serif;
+  background: #C2B280 ;
+  overflow-x: hidden;
+}
+
+header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/165/532/original/southafricazebra.png?1746970006");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  padding: 50px;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-gap: 30px;
+}
+
+.img-responsive {
+  width: 100%;
+  display: block;
+}
+
+.grid.grid-2-columns {
+  grid-template-columns: 1fr 1fr;
+}
+
+.grid.grid-3-columns {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid.grid-3-columns-with-first-narrow {
+  grid-template-columns: 1fr 2fr 2fr;
+}
+
+.embed {
+  width: 100%;
+  aspect-ratio: 1 /1;
+}
+
+.instagram embeds {
+  width: 100%;
+  margin: 30px 0;
+}
+
+.card {
+  background: white;
+  margin: 30px 0;
+}
+
+.card-header.grid {
+  grid-gap: 0;
+}
+
+.card-header.grid.grid-2-columns > * {
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-header.grid.grid-2-columns {
+  align-items: stretch;
+}
+
+.card-body {
+  padding: 30px;
+}
+
+.card-footer {
+  padding: 0 30px 30px;
+}
+
+.button {
+  display: block;
+  color: white;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  padding: 16px;
+  border-radius: 5px;
+  background-color: #C2B280;
+  text-decoration: none;
+}
+
+.button:hover {
+  background-color: gold;
+  transform: scale(1.02);
+  transition: all 0.3s ease;
+}
+
+section {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 100px;
+}
+
+section.secondary {
+  background-color: #f8f8f8;
+}
+
+header h1 {
+  font-weight: 700;
+  font-size: 96px;
+  line-height: 1;
+  margin: 30px 0;
+}
+
+header h2 {
+  font-weight: 400;
+  font-size: 40px;
+  margin: 0;
+}
+
+header h3 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.5;
+  letter-spacing: 3px;
+  margin: 0;
+}
+
+header a {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #272044;
+  padding: 16px 32px;
+  border-radius: 5px;
+  margin-top: 32px;
+  display: inline-block;
+  text-align: center;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  background: white;
+  text-decoration: none;
+}
+
+main {
+  background-color: white;
+}
+main h2 {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 5px;
+  color: #272044;
+  opacity: 0.3;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+main h3 {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 1.5;
+  color: #272044;
+  margin: 0;
+}
+
+main h4 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1;
+  color: #272044;
+  margin: 0;
+}
+
+main h5 {
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #272044;
+  margin: 0;
+}
+
+main p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  opacity: 0.7;
+}
+
+.main-image {
+  max-width: 100%;
+  width: 500px;
+  height: auto;
+  display: block;
+  margin: 0 auto 32px auto;
+  border-radius: 5px;
+}
+
+.gallery-pics {
+  margin-bottom: 30px;
+}
+
+footer {
+  background-image: linear-gradient(
+      rgba(39, 32, 68, 0.9),
+      rgba(39, 32, 68, 0.9)
+    ),
+    url("../images/footer.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+footer h3 {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+footer p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  opacity: 0.7;
+}
+
+footer ul {
+  padding: 0;
+}
+
+footer li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+footer a {
+  color: white;
+  opacity: 0.7;
+}
+
+@media (max-width: 960px) {
+  header {
+    padding: 60px 0;
+  }
+
+  header h1 {
+    font-size: 48px;
+  }
+  header h2 {
+    font-size: 20px;
+  }
+  header h3 {
+    font-size: 12px;
+  }
+
+  .grid.grid-2-columns,
+  .grid.grid-3-columns-with-first-narrow {
+    grid-template-columns: 1fr;
+  }
+
+  .grid {
+    grid-gap: 32px;
+  }
+
+  section {
+    padding: 30px;
+  }
+
+  .grid.grid-3-columns {
+    grid-template-columns: 1fr;
+  }
+  .card-header img {
+    display: none;
+  }
+
+  .embed {
+    aspect-ratio: 16/9;
+  }
+}
+  </style>
+  <body>
+    <div class="container">
+      <header>
+        <h3>.VACATION CHALLENGE.</h3>
+        <h1>Welcome to South Africa</h1>
+        <h2>14 days trip with my mum</h2>
+        <a href="#more">See More</a>
+      </header>
+    </div>
+
+    <main>
+      <section class="grid grid-2-columns">
+        <div>
+          <img
+            class="main-image"
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/165/533/original/sunsetkrugerpark.png?1746970632"
+            alt="sunset"
+          />
+        </div>
+        <div>
+          <a name="more"></a>
+          <h2>Why South Africa?</h2>
+          <h3>South Africa from East to West</h3>
+          <p>
+            A few years ago, I had the incredible opportunity to travel to South Africa with my mum on an organised trip. We started in the east, in Johannesburg, and went west to Cape Town. It was one of the most memorable experiences we've shared, and I truly value the chance to create special memories like this with her.
+          </p>
+
+          <p>
+            Along the way, we explored many fascinating places—from the vibrant city of Johannesburg and the historic township of Soweto to the stunning panoramic countryside views. A major highlight for me was Kruger National Park, where seeing animals in the wild felt magical. We also visited Addo Elephant Park, which was just as breathtaking.
+          </p>
+          <p>
+            Our journey continued with wine tasting in Stellenbosch and stops in charming villages on the route to Cape Town. The food, the people, and the natural beauty of South Africa left a lasting impression. I hope to enjoy many more trips like this with my mum in the future.
+          </p>
+        </div>
+      </section>
+      <section class="secondary">
+        <h2 class="text-center">PLACES IN SOUTH AFRICA</h2>
+        <h3 class="text-center">My Favourite Places From The Trip</h3>
+
+        <div class="grid grid-3-columns">
+          <div class="card">
+            <div class="card-header grid grid-2-columns">
+              <img
+                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/165/534/original/cheeta.png?1746971803"
+                alt="Kruger Park"
+                class="img-responsive"
+              />
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3645.2093098235514!2d31.552165275343462!3d-23.988384778508795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ec34896c535a0a1%3A0x9a504ed31f67787b!2sKruger%20National%20Park!5e0!3m2!1sen!2suk!4v1746971857994!5m2!1sen!2suk" class="embed
+            style=" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="card-body">
+              <h4>Kruger National Park</h4>
+              <p>
+                Kruger National Park is one of Africa’s largest and most famous game reserves, located in northeastern South Africa. Spanning nearly 20,000 square kilometres, it's home to an incredible variety of wildlife, including the iconic Big Five: lions, elephants, leopards, rhinos, and buffalo. The park offers diverse landscapes—from open savannas to dense bushveld—and supports over 500 bird species and numerous reptiles and plant life. Visitors can explore Kruger through guided safaris, self-drive routes, and luxury lodges or rustic camps. Its well-preserved ecosystem and world-class conservation efforts make it a top destination for nature lovers and wildlife enthusiasts alike.
+              </p>
+              <h5>Address:</h5>
+              <p>Kruger Nation Park South Africa</p>
+              <h5>What I like about it</h5>
+              <p>
+                During our stay at Kruger National Park, we spent a few unforgettable days split between Manyeleti Game Reserve and Shalati Safari Camp. It was an incredible experience—each day began with an early morning safari and ended with another in the late afternoon, allowing us to witness wildlife in their most active moments. We were lucky to see four out of the Big Five, missing only the lion, but spotting a cheetah and catching a rare, brief glimpse of a leopard, which felt like a once-in-a-lifetime moment. One of the highlights was a full-day safari across the entire park before we moved on to our next destination. The food at the camp was also exceptional, adding comfort and flavour to an already extraordinary adventure.
+              </p>
+              <div class="card-footer">
+                <a
+                  href="https://maps.app.goo.gl/EyjQzWxRpVCgCZxm8"
+                  class="button"
+                  target="_blank"
+                  >Learn More</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header grid grid-2-columns">
+              <img
+                src="images/restaurants/circolo popolare.png"
+                alt="Circolo Popolare"
+                class="img-responsive"
+              />
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m19!1m8!1m3!1d79449.11950274376!2d-0.2162681!3d51.5171606!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x48761ba809fd882b%3A0x817eee82a924ec96!2s40-41%20Rathbone%20Pl%2C%20London%20W1T%201HX!3m2!1d51.5171895!2d-0.13386789999999998!5e0!3m2!1sen!2suk!4v1744987881278!5m2!1sen!2suk"
+                  class="embed
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+            <div class="card-body">
+              <h4>Cirocolo Popolar</h4>
+              <p>
+                Circolo Popolare is a vibrant Italian restaurant located in
+                Fitzrovia, known for its lively atmosphere and delicious, hearty
+                dishes. The restaurant’s fun, eclectic décor and extensive menu
+                make it a must-visit for those craving authentic Italian
+                cuisine.
+              </p>
+              <h5>Address:</h5>
+              <p>40-41 Rathbone Pl, London W1T 1HX</p>
+              <h5>What I like about it</h5>
+              <p>
+                The atmosphere is so energetic, and the décor is full of
+                character. The food is absolutely delicious, and the service is
+                always friendly and attentive. The truffle pasta is one of the
+                best.
+              </p>
+              <div class="card-footer">
+                <a
+                  href="https://maps.app.goo.gl/Aw2HUeXyoW1tdYKo6"
+                  class="button"
+                  target="_blank"
+                  >Learn More</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header grid grid-2-columns">
+              <img
+                src="images/restaurants/Happyface.png"
+                alt="Happy Face"
+                class="img-responsive"
+              />
+              <iframe src="https://www.google.com/maps/embed?pb=!1m19!1m8!1m3!1d79413.8281819679!2d-0.2064949!3d51.5373898!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x48761bcd0885f011%3A0x64652b751b04c02d!2s14%20Handyside%20St%2C%20London%20N1C%204DN!3m2!1d51.537418699999996!2d-0.12409469999999999!5e0!3m2!1sen!2suk!4v1744988002380!5m2!1sen!2suk" class="embed" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="card-body">
+              <h4>Happy Face</h4>
+              <p>
+                Happy Face Pizzeria is a cosy and charming pizzeria located in
+                King's Cross, offering a delightful selection of wood-fired
+                pizzas. The casual vibe and warm atmosphere make it a perfect
+                spot for a laid-back meal with friends or family.
+              </p>
+              <h5>Address:</h5>
+              <p>14 Handyside St, London N1C 4DN/p></p>
+              <h5>What I like about it</h5>
+              <p>
+                The pizzas are incredible, with a perfect balance of flavors.
+                The friendly service and cosy ambiance make it a great place to
+                unwind and enjoy a delicious meal.
+              </p>
+              <div class="card-footer">
+                <a
+                  href="https://maps.app.goo.gl/rojiGNG8hWgJuzyY9"
+                  class="button"
+                  target="_blank"
+                  >Learn More</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+  </body>
+</html>
